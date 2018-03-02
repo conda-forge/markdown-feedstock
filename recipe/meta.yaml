@@ -1,6 +1,5 @@
 {% set name = "Markdown" %}
 {% set version = "2.6.11" %}
-{% set build = 0 %}
 {% set sha256 = "a856869c7ff079ad84a3e19cd87a64998350c2b94e9e08e44270faef33400f81" %}
 
 package:
