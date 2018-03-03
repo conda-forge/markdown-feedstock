@@ -14,6 +14,8 @@ build:
   noarch: python
   number: 0
   script: python -m pip install --no-deps --ignore-installed .
+  entry_points:
+    - markdown_py = markdown.__main__:run
 
 requirements:
   build:
