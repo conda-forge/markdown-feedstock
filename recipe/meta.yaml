@@ -11,7 +11,7 @@ source:
 
 build:
   noarch: python
-  skip: true  # [py34 and py33 and py32 and py31 and py30]
+  skip: true
   number: 0
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
