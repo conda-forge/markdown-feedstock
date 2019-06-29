@@ -1,6 +1,5 @@
 {% set name = "Markdown" %}
-{% set version = "2.6.11" %}
-{% set sha256 = "a856869c7ff079ad84a3e19cd87a64998350c2b94e9e08e44270faef33400f81" %}
+{% set version = "3.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -8,10 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: "2e50876bcdd74517e7b71f3e7a76102050edec255b3983403f1a63e7c8a41e7a"
 
 build:
   noarch: python
+  skip: true  # [py34 and py33 and py32 and py31 and py30]
   number: 0
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
@@ -23,11 +23,14 @@ requirements:
     - pip
   run:
     - python
+    - setuptools >=36
 
 test:
   imports:
     - markdown
     - markdown.extensions
+    - coverage
+    - pyyaml
   commands:
     - markdown_py -h
 
@@ -40,10 +43,11 @@ about:
   description: |
     This is a Python implementation of John Gruber’s Markdown. It is almost
     completely compliant with the reference implementation, though there are a
-    few very minor differences.
+    few known issues.
   doc_url: https://python-markdown.github.io/
   dev_url: https://github.com/Python-Markdown/markdown
 
 extra:
   recipe-maintainers:
     - dougalsutherland
+    - philip-khor
