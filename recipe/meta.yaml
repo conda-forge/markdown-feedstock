@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: "2e50876bcdd74517e7b71f3e7a76102050edec255b3983403f1a63e7c8a41e7a"
+  sha256: "5ad7180c3ec16422a764568ad6409ec82460c40d1631591fa53d597033cc98bf"
 
 build:
   noarch: python
@@ -18,10 +18,10 @@ build:
 
 requirements:
   build:
-    - python
+    - python >=3.5
     - pip
   run:
-    - python
+    - python >=3.5
     - setuptools >=36
 
 test:
