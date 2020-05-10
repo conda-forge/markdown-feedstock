@@ -17,12 +17,12 @@ build:
     - markdown_py = markdown.__main__:run
 
 requirements:
-  build:
-    - python >=3.5
+  host:
     - pip
+    - python
   run:
-    - python >=3.5
-    - setuptools >=36
+    - importlib-metadata  # [py<38]
+    - python
 
 test:
   imports:
