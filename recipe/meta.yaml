@@ -1,5 +1,5 @@
 {% set name = "Markdown" %}
-{% set version = "3.2.1" %}
+{% set version = "3.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: "90fee683eeabe1a92e149f7ba74e5ccdc81cd397bd6c516d93a8da0ef90b6902"
+  sha256: 1fafe3f1ecabfb514a5285fca634a53c1b32a81cb0feb154264d55bf2ff22c17
 
 build:
   noarch: python
@@ -17,12 +17,12 @@ build:
     - markdown_py = markdown.__main__:run
 
 requirements:
-  build:
-    - python >=3.5
+  host:
     - pip
+    - python
   run:
-    - python >=3.5
-    - setuptools >=36
+    - importlib-metadata
+    - python
 
 test:
   imports:
@@ -36,7 +36,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.md
-  summary: 'Python implementation of Markdown.'
+  summary: Python implementation of Markdown.
   description: |
     This is a Python implementation of John Gruber’s Markdown. It is almost
     completely compliant with the reference implementation, though there are a
