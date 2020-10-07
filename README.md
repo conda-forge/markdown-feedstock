@@ -5,7 +5,7 @@ Home: https://python-markdown.github.io/
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Python implementation of Markdown.
 
