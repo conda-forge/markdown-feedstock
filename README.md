@@ -5,9 +5,13 @@ Home: https://python-markdown.github.io/
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/markdown-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python implementation of Markdown.
+
+Development: https://github.com/Python-Markdown/markdown
+
+Documentation: https://python-markdown.github.io/
 
 This is a Python implementation of John Gruber’s Markdown. It is almost
 completely compliant with the reference implementation, though there are a
