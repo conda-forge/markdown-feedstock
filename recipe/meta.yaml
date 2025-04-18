@@ -18,11 +18,12 @@ build:
 
 requirements:
   host:
+    - setuptools >=77.0
     - pip
-    - python >=3.6
+    - python {{ python_min }}    
   run:
     - importlib-metadata >=4.4
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -30,6 +31,8 @@ test:
     - markdown.extensions
   commands:
     - markdown_py -h
+  requires:
+    - python {{ python_min }}
 
 about:
   home: https://python-markdown.github.io/
