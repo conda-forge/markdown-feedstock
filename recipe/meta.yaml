@@ -20,7 +20,7 @@ requirements:
   host:
     - setuptools >=77.0
     - pip
-    - python {{ python_min }}    
+    - python {{ python_min }}
   run:
     - importlib-metadata >=4.4
     - python >={{ python_min }}
