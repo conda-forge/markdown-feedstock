@@ -17,7 +17,6 @@ This is a Python implementation of John Gruber’s Markdown. It is almost
 completely compliant with the reference implementation, though there are a
 few known issues.
 
-
 Current build status
 ====================
 
