@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: Markdown
-  version: "3.11.2"
+  version: "3.11.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | lower }}-${{ version }}.tar.gz
-  sha256: 87bf5d90f2d2882e2c02fcda182c2800456b985bff38913867c49706481514b0
+  sha256: 81eb91631dc97ad1efbc76019ef0f80fe90ca49ddf81546752d79989c3bfff3e
 
 build:
   number: 0
